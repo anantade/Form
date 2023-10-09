@@ -43,7 +43,6 @@ export default function Form() {
   };
 
   const handleReset = () => {
-    // Clear the form fields and reset state
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -53,14 +52,14 @@ export default function Form() {
   };
 
   return (
-    <div>
+    <div className="p-40 bg-gradient-to-r from-indigo-500 ">
       <div className="center">
         <form onSubmit={handleSubmit}>
           <label htmlFor="firstName">First Name: -</label>
           <input
             type="text"
             placeholder="Enter First name"
-            className="input1"
+            className="w-96 h-10 ml-[70px] border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2"
             value={firstName}
             required
             onChange={(e) => setFirstName(e.target.value)}
@@ -72,7 +71,7 @@ export default function Form() {
           <input
             type="text"
             placeholder="Enter last name"
-            className="input1"
+            className="w-96 h-10 ml-[70px] border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2"
             value={lastName}
             required
             onChange={(e) => setLastName(e.target.value)}
@@ -84,7 +83,7 @@ export default function Form() {
           <input
             type="email"
             placeholder="email"
-            className="input2"
+            className="w-96 h-10 ml-[107px] border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2"
             value={email}
             required
             onChange={(e) => setEmail(e.target.value)}
@@ -96,12 +95,12 @@ export default function Form() {
           <input
             type={showPassword ? "text" : "password"}
             placeholder="password"
-            className="input2"
+            className="w-96 h-10 ml-[79px] border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2"
             value={password}
             required
             onChange={(e) => setPassword(e.target.value)}
           />
-          <span>
+          <span className="ml-8">
             <input
               type="checkbox"
               id="showPassword"
@@ -116,12 +115,12 @@ export default function Form() {
           <input
             type={showConfirmPassword ? "text" : "password"}
             placeholder="Confirm Password"
-            className="input2"
+            className="w-96 h-10 ml-5 border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2 "
             value={confirmPassword}
             required
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <span>
+          <span className="ml-8">
             <input
               type="checkbox"
               id="showConfirmPassword"
@@ -133,10 +132,10 @@ export default function Form() {
           <br />
           <br />
 
-          <button type="submit">Submit</button>
+          <button type="submit" className=" ml-48  hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded bg-green-300 shadow-lg shadow-[#4b5563]">Submit</button>
           
           {/* Reset button */}
-          <button type="button" onClick={handleReset}>Reset</button>
+          <button type="button" onClick={handleReset} className="ml-10  hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded bg-red-300 shadow-lg shadow-[#4b5563]">Reset</button>
         </form>
       </div>
     </div>
