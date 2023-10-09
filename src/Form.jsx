@@ -7,8 +7,8 @@ export default function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // State for password visibility
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false); // State for confirm password visibility
+  const [showPassword, setShowPassword] = useState(false); 
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,12 +25,12 @@ export default function Form() {
     setConfirmPassword("");
   };
 
-  // Function to toggle password visibility
+ 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  // Function to toggle confirm password visibility
+ 
   const toggleConfirmPasswordVisibility = () => {
     setShowConfirmPassword(!showConfirmPassword);
   };
@@ -77,7 +77,7 @@ export default function Form() {
 
           <label htmlFor="password">Password: -</label>
           <input
-            type={showPassword ? "text" : "password"} // Toggle input type
+            type={showPassword ? "text" : "password"} 
             placeholder="password"
             className="input2"
             value={password}
@@ -97,7 +97,7 @@ export default function Form() {
 
           <label htmlFor="confirmpassword">Confirm Password: -</label>
           <input
-            type={showConfirmPassword ? "text" : "password"} // Toggle input type
+            type={showConfirmPassword ? "text" : "password"} 
             placeholder="Confirm Password"
             className="input2"
             value={confirmPassword}
