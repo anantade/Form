@@ -5,16 +5,34 @@ export default function Form() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // State for password visibility
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false); // State for confirm password visibility
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("First Name:", firstName);
     console.log("Last Name:", lastName);
     console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Confirm Password:", confirmPassword);
 
     setFirstName("");
     setLastName("");
     setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+  };
+
+  // Function to toggle password visibility
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  // Function to toggle confirm password visibility
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
   };
 
   return (
@@ -26,7 +44,8 @@ export default function Form() {
             type="text"
             placeholder="Enter First name"
             className="input1"
-            value={firstName} required
+            value={firstName}
+            required
             onChange={(e) => setFirstName(e.target.value)}
           />
           <br />
@@ -37,7 +56,8 @@ export default function Form() {
             type="text"
             placeholder="Enter last name"
             className="input1"
-            value={lastName} required
+            value={lastName}
+            required
             onChange={(e) => setLastName(e.target.value)}
           />
           <br />
@@ -48,9 +68,50 @@ export default function Form() {
             type="email"
             placeholder="email"
             className="input2"
-            value={email} required
+            value={email}
+            required
             onChange={(e) => setEmail(e.target.value)}
           />
+          <br />
+          <br />
+
+          <label htmlFor="password">Password: -</label>
+          <input
+            type={showPassword ? "text" : "password"} // Toggle input type
+            placeholder="password"
+            className="input2"
+            value={password}
+            required
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span>
+            <input
+              type="checkbox"
+              id="showPassword"
+              onChange={togglePasswordVisibility}
+            />
+            <label htmlFor="showPassword">Show Password</label>
+          </span>
+          <br />
+          <br />
+
+          <label htmlFor="confirmpassword">Confirm Password: -</label>
+          <input
+            type={showConfirmPassword ? "text" : "password"} // Toggle input type
+            placeholder="Confirm Password"
+            className="input2"
+            value={confirmPassword}
+            required
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <span>
+            <input
+              type="checkbox"
+              id="showConfirmPassword"
+              onChange={toggleConfirmPasswordVisibility}
+            />
+            <label htmlFor="showConfirmPassword">Show Confirm Password</label>
+          </span>
           <br />
           <br />
 
