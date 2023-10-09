@@ -7,11 +7,19 @@ export default function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false); 
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false); 
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [passwordsMatch, setPasswordsMatch] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (password !== confirmPassword) {
+      setPasswordsMatch(false);
+      alert("Password and Confirm Password do not match.");
+      return; // Exit the function
+    }
+
     console.log("First Name:", firstName);
     console.log("Last Name:", lastName);
     console.log("Email:", email);
@@ -23,16 +31,25 @@ export default function Form() {
     setEmail("");
     setPassword("");
     setConfirmPassword("");
+    setPasswordsMatch(true);
   };
 
- 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
- 
   const toggleConfirmPasswordVisibility = () => {
     setShowConfirmPassword(!showConfirmPassword);
+  };
+
+  const handleReset = () => {
+    // Clear the form fields and reset state
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+    setPasswordsMatch(true);
   };
 
   return (
@@ -77,7 +94,7 @@ export default function Form() {
 
           <label htmlFor="password">Password: -</label>
           <input
-            type={showPassword ? "text" : "password"} 
+            type={showPassword ? "text" : "password"}
             placeholder="password"
             className="input2"
             value={password}
@@ -97,7 +114,7 @@ export default function Form() {
 
           <label htmlFor="confirmpassword">Confirm Password: -</label>
           <input
-            type={showConfirmPassword ? "text" : "password"} 
+            type={showConfirmPassword ? "text" : "password"}
             placeholder="Confirm Password"
             className="input2"
             value={confirmPassword}
@@ -112,10 +129,14 @@ export default function Form() {
             />
             <label htmlFor="showConfirmPassword">Show Confirm Password</label>
           </span>
+
           <br />
           <br />
 
           <button type="submit">Submit</button>
+          
+          {/* Reset button */}
+          <button type="button" onClick={handleReset}>Reset</button>
         </form>
       </div>
     </div>
