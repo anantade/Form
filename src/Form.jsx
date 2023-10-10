@@ -78,7 +78,7 @@ export default function Form() {
   };
 
   return (
-    <div className="md:pt-40 md:pb-20 md:pl-40 pl-2 pt-10 pb-[100%] bg-gradient-to-r from-indigo-500 ">
+    <div className="md:pt-[10%] md:pl-[10%] pl-2 pt-10 h-screen bg-gradient-to-r from-indigo-500 ">
       <div className="center">
         <form onSubmit={handleSubmit}>
           <label htmlFor="firstName" className=" text-lg font-bold">First Name: -</label>
