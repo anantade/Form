@@ -83,7 +83,7 @@ export default function Form() {
        <div className="md:pt-[2%]  md:pl-[7%]  md:ml-10 ">
 
          {/* left side of page */}
-        <div className="mt-5 w-[1119.5px]   pl-2 flex rounded-xl  bg-white pr-0">
+        <div className="mt-5 md:w-[1119.5px]  md:pl-2 pl-5  flex rounded-xl  bg-white pr-0">
 
          <div className=" pb-5">
           <div className="flex">
@@ -95,7 +95,7 @@ export default function Form() {
             <button className=" ml-2 font-bold py-2 px-4 rounded-lg  ">Sing in</button>
           </div>
         </div>
-          <h1 className=" text-4xl pb-8 pl-64 font-bold underline">Register</h1>
+          <h1 className=" text-4xl pb-8 md:pl-64 pl-28 font-bold underline">Register</h1>
 
         <form onSubmit={handleSubmit}>
           <label htmlFor="firstName" className=" text-lg  font-bold">First Name: -</label>
@@ -121,12 +121,12 @@ export default function Form() {
           />
           <br />
           <br />
-
-          <label htmlFor="email" className=" text-lg font-bold  ">Email: -</label>
+          
+          <label htmlFor="email" className=" text-lg font-bold pl-1 ">Email :-</label>
           <input
             type="email"
             placeholder="email"
-            className="w-72 h-10 md:ml-[116px] ml-3  border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2 shadow-lg shadow-[#4b5563]"
+            className="w-72 h-10 md:ml-[116px] items-center ml-10  border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2 shadow-lg shadow-[#4b5563]"
             value={email}
             required
             onChange={(e) => setEmail(e.target.value)}
