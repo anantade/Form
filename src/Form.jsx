@@ -78,12 +78,12 @@ export default function Form() {
   };
 
   return (
-    <div className=" h-screen  bg-[url('https://static.vecteezy.com/system/resources/previews/008/715/553/non_2x/two-birds-sit-together-on-a-branch-on-a-dark-starry-moonlit-night-vector.jpg')]  ">
+    <div className=" h-screen bg-cover bg-center  bg-[url('https://static.vecteezy.com/system/resources/previews/008/715/553/non_2x/two-birds-sit-together-on-a-branch-on-a-dark-starry-moonlit-night-vector.jpg')]  ">
 
-       <div className="md:pt-[2%]  md:pl-[7%] md:ml-10 ">
+       <div className="md:pt-[2%]  md:pl-[7%]  md:ml-10 ">
 
          {/* left side of page */}
-        <div className="mt-5 w-[90%] h-[90%]  pl-2 flex rounded-xl bg-white pr-0">
+        <div className="mt-5 w-[1119.5px]   pl-2 flex rounded-xl  bg-white pr-0">
 
          <div className=" pb-5">
           <div className="flex">
@@ -194,7 +194,7 @@ export default function Form() {
         </form>
         </div>
   
-      <div className="w-[51.85%] bg-[#090659] rounded-xl md:block hidden">
+      <div className="w-[582px] bg-[#090659] rounded-xl md:block hidden">
 
        <img src="https://static.vecteezy.com/system/resources/previews/008/715/553/non_2x/two-birds-sit-together-on-a-branch-on-a-dark-starry-moonlit-night-vector.jpg" className="rounded-xl h-[50%] w-[100%]" alt="" />
       
@@ -203,9 +203,9 @@ export default function Form() {
          <p className="text-gray-400 pt-2 text-center text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Sint voluptatibus perspiciatis iste saepe neque nam <br /> fugiat voluptatum quo expedita impedit.</p>
        </div>
 
-         <div className="flex">
+         <div className="flex item">
           <hr className="w-28 h-1 mt-6 ml-3 bg-white border-0 rounded dark:bg-gray-400" />
-            <p className="ml-24 text-white mt-3 text-lg">Get Connected</p>
+            <p className="ml-28 text-white mt-3 text-center text-lg">Get Connected</p>
           <hr className="w-28 h-1 mt-6 ml-24 bg-white border-0 rounded dark:bg-gray-400" />
          </div>
 
