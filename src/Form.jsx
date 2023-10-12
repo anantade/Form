@@ -78,7 +78,7 @@ export default function Form() {
   };
 
   return (
-    <div className=" h-screen bg-cover bg-center  bg-[url('https://static.vecteezy.com/system/resources/previews/008/715/553/non_2x/two-birds-sit-together-on-a-branch-on-a-dark-starry-moonlit-night-vector.jpg')]  ">
+    <div className=" h-screen bg-cover bg-center flex items-center justify-center min-h-screen bg-[url('https://static.vecteezy.com/system/resources/previews/008/715/553/non_2x/two-birds-sit-together-on-a-branch-on-a-dark-starry-moonlit-night-vector.jpg')]  ">
 
        <div className="md:pt-[2%]  md:pl-[7%]  md:ml-10 ">
 
