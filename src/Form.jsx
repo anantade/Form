@@ -80,11 +80,12 @@ export default function Form() {
   return (
     <div className=" h-screen bg-cover bg-center flex items-center justify-center min-h-screen bg-[url('https://static.vecteezy.com/system/resources/previews/008/715/553/non_2x/two-birds-sit-together-on-a-branch-on-a-dark-starry-moonlit-night-vector.jpg')]  ">
 
-       <div className="md:pt-[2%]  md:pl-[7%]  md:ml-10 ">
+       <div className="">
 
-         {/* left side of page */}
+        
         <div className="mt-5 md:w-[1119.5px]  md:pl-2 pl-5  flex rounded-xl  bg-white pr-0">
 
+         {/* left side of page */}
          <div className=" pb-5">
           <div className="flex">
           <div>
@@ -126,10 +127,11 @@ export default function Form() {
           <input
             type="email"
             placeholder="email"
-            className="w-72 h-10 md:ml-[116px] items-center ml-10  border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2 shadow-lg shadow-[#4b5563]"
+            className="w-72 h-10 md:ml-[116px] items-center ml-10 md:pr-0 pr-36 border-spacing-1.5 border-black rounded-xl bg-slate-200 pl-2 shadow-lg shadow-[#4b5563]"
             value={email}
             required
             onChange={(e) => setEmail(e.target.value)}
+            
           />
           <br />
           <br />
