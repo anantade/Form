@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import './Style.css'
+
 
 export default function Login() {
-  return (
-    <div className=' h-screen bg-cover bg-center flex items-center justify-center min-h-screen bg-[url("https://wallpapers.com/images/hd/starry-night-sky-over-a-river-92a8ngoxc7yvj8tb.jpg")]'>
 
-      <div className="relative w-[400px] h-[440px] bg-transparent  rounded-xl backdrop-blur-sm shadow-sm shadow-[#4b5563] pt-[50px] ">
+  const [email,setEmail] = useState('');
+  const [password,setPassword] = useState('');
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+
+    console.log("Email : -", email )
+    console.log("Password : -", password )
+ 
+    setEmail("");
+    setPassword("");
+ }
+
+
+  return (
+    <div className=' h-screen bg-cover bg-center flex items-center justify-center min-h-screen bg-[url("https://images8.alphacoders.com/468/468739.jpg")]'>
+
+      <div className="relative w-[400px] h-[440px] bg-transparent  rounded-xl backdrop-blur-lg shadow-sm shadow-white pt-[50px] ">
 
         <div className="w-[100%] p-[30px]">
-          <p className="font-bold text-center text-4xl">Login</p>
-          <form action="">
-            <div className="relative w-[100%] h-[50px] border-b-4 mt-[30px] mb-[30px] border-black">
+          <p className="font-bold text-center text-4xl text-white">Login</p>
+
+          <form onSubmit={handleSubmit}>
+            <div className="relative w-[100%] h-[50px] border-b-4 mt-[30px] mb-[30px] border-black ">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -27,8 +45,8 @@ export default function Login() {
                   />
                 </svg>
               </span>
-              <input type="email" required  className="w-[100%] h-[100%] bg-transparent border-none focus:outline-none" />
-              <label htmlFor="email" className="absolute top-1/2 left-5 transform -translate-y-1/2 text-lg text-gray-900 font-semibold pointer-events-none label"> Email</label>
+              <input type="email" required value={email}  className="w-[100%] h-[100%] bg-transparent border-none focus:outline-none " onChange={(e) => setEmail(e.target.value) } />
+              <label htmlFor="email" className="absolute top-1/2 left-5 transform -translate-y-1/2 text-lg text-gray-400 font-semibold pointer-events-none label "> Email</label>
             </div>
 
             <div className="relative w-[100%] h-[50px] border-b-4 mt-[30px] mb-[30px] border-black">
@@ -48,17 +66,19 @@ export default function Login() {
                   />
                 </svg>
               </span>
-              <input type="password" required className="w-[100%] h-[100%] bg-transparent border-none focus:outline-none" />
-              <label htmlFor="password" className="absolute top-1/2 left-5 transform -translate-y-1/2 text-lg text-gray-900 font-semibold pointer-events-none label">Password</label>
+              <input type="password" required value={password} className="w-[100%] h-[100%] bg-transparent border-none focus:outline-none" onChange={(e) => setPassword(e.target.value) } />
+              <label htmlFor="password" className="absolute top-1/2 left-5 transform -translate-y-1/2 text-lg text-gray-400 font-semibold pointer-events-none label">Password</label>
             </div>
 
-            <div>
-                <label htmlFor=""><input type="Checkbox" /> Remember me</label>   
+            <div className="flex ">
+                <p htmlFor="" className="text-white"><input type="Checkbox" /> Remember me</p>
+                <Link to="" className="ml-20 text-yellow-500">Forget password ?</Link>   
             </div>
-            <button className="">LogIN</button>
+            <button type="submit" className="text-white bg-lime-600 w-[350px] h-10 mt-5 rounded-lg font-bold">LogIn</button>
 
-            <div>
-                {/* <Link to=""> Register</Link> */}
+            <div className="flex mt-2">
+              <p className="text-white">Dont have an account ? </p>
+                <Link to="/Form" className="text-blue-500"><u>Register</u></Link>
             </div>
           </form>
         </div>

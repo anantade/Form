@@ -1,5 +1,6 @@
 
 
+import { Route,Routes } from "react-router-dom"
 import './App.css'
 import Form from './Form'
 import Login from './Login'
@@ -9,9 +10,11 @@ function App() {
 
   return (
     <>
-      {/* <Form/> */}
-      {/* <Login/> */}
-      <Navbar/>
+    <Routes>
+      <Route path="/Form" element={<Form/>}/>
+      <Route path="/" element={<Login/>}/>    
+   </Routes>
+      {/* <Navbar/> */}
     </>
   )
 }
