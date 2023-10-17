@@ -74,7 +74,7 @@ export default function Login() {
                 <p htmlFor="" className="text-white"><input type="Checkbox" /> Remember me</p>
                 <Link to="" className="ml-20 text-yellow-500">Forget password ?</Link>   
             </div>
-            <button type="submit" className="text-white bg-lime-600 w-[350px] h-10 mt-5 rounded-lg font-bold">LogIn</button>
+            <button type="submit" className="text-white bg-violet-600 w-[350px] h-10 mt-5 rounded-lg font-bold">LogIn</button>
 
             <div className="flex mt-2">
               <p className="text-white">Dont have an account ? </p>
