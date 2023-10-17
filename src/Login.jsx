@@ -28,7 +28,7 @@ export default function Login() {
           <p className="font-bold text-center text-4xl text-white">Login</p>
 
           <form onSubmit={handleSubmit}>
-            <div className="relative w-[100%] h-[50px] border-b-4 mt-[30px] mb-[30px] border-black ">
+            <div className="relative w-[100%] h-[50px] border-b-2 mt-[30px] mb-[30px] border-black ">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ export default function Login() {
               <label htmlFor="email" className="absolute top-1/2 left-5 transform -translate-y-1/2 text-lg text-gray-400 font-semibold pointer-events-none label "> Email</label>
             </div>
 
-            <div className="relative w-[100%] h-[50px] border-b-4 mt-[30px] mb-[30px] border-black">
+            <div className="relative w-[100%] h-[50px] border-b-2 mt-[30px] mb-[30px] border-black">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
